@@ -1,0 +1,20 @@
+.bookmark-activate {
+  svg {
+    circle {
+      fill: $p-dark-cyan;
+    }
+    path {
+      fill: white;
+    }
+  }
+  color: $p-dark-cyan;
+  background-color: rgb(245, 245, 250);
+}
+
+.out-of-stock {
+  opacity: 0.5;
+  .product-button {
+    background-color: rgb(168, 167, 167);
+    cursor: default;
+  }
+}

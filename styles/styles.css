@@ -66,14 +66,19 @@ select {
   *,
   *::before,
   *::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.attribution {
+  margin: 1.875rem auto;
+  font-size: 0.875rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 
 body {
@@ -203,14 +208,14 @@ nav {
 .back-button {
   cursor: pointer;
   background-color: #3cb4ac;
-  padding: 0 3.125rem;
+  padding: 0 2.5rem;
   border: none;
   border-radius: 30px;
   font-weight: 700;
   font-size: 0.875rem;
   color: white;
-  -webkit-transition: all 0.3s ease !important;
-  transition: all 0.3s ease !important;
+  -webkit-transition: all 0.25s ease !important;
+  transition: all 0.25s ease !important;
 }
 
 .back-button:hover {
@@ -226,6 +231,13 @@ nav {
   width: 56px;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.bookmark-button:hover {
+  opacity: 0.5;
 }
 
 .progress-container {
@@ -244,7 +256,7 @@ nav {
 }
 
 .progress-bar {
-  width: 85%;
+  width: 89.914%;
   height: 0.625rem;
   background-color: #f3f3f3;
   margin: 0.625rem auto;
@@ -262,19 +274,23 @@ nav {
   padding: 1.875rem 1.875rem;
 }
 
+.about-container h2 {
+  margin-bottom: 0.9375rem;
+}
+
 .about-p {
-  padding: 0.9375rem 0;
+  padding: 0.625rem 0;
 }
 
 .products {
-  margin-top: 1.25rem;
+  margin-top: 1.5625rem;
 }
 
 .product-container {
   border-radius: 10px;
   border: solid 1px #d2d2d2;
   margin: 1.25rem 0;
-  padding: 1.25rem;
+  padding: 1.25rem 1.5625rem;
 }
 
 .product-container h3 {
@@ -320,23 +336,63 @@ nav {
   cursor: pointer;
 }
 
+.bookmark-activate {
+  color: #147b74;
+  background-color: #f5f5fa;
+}
+
+.bookmark-activate svg circle {
+  fill: #147b74;
+}
+
+.bookmark-activate svg path {
+  fill: white;
+}
+
 .out-of-stock {
   opacity: 0.5;
 }
 
 .out-of-stock .product-button {
   background-color: #a8a7a7;
-  cursor: none;
+  cursor: default;
 }
 
-.attribution {
-  margin: 1.875rem auto;
-  font-size: 0.875rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-.attribution a {
-  color: #3e52a3;
+@media only screen and (min-width: 600px) {
+  .bookmark-button {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding-right: 1.875rem;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #7a7a7a;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  .bookmark-button svg {
+    margin-right: 1.25rem;
+  }
+  .bookmark-button:hover {
+    opacity: 0.8;
+  }
+  .product-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

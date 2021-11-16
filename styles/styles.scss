@@ -106,13 +106,13 @@ nav {
 .back-button {
   cursor: pointer;
   background-color: $p-mod-cyan;
-  padding: 0 rem(50px);
+  padding: 0 rem(40px);
   border: none;
   border-radius: 30px;
   font-weight: $fw-3;
   font-size: rem(14px);
   color: white;
-  transition: all 0.3s ease !important;
+  transition: all 0.25s ease !important;
   &:hover {
     background-color: $p-dark-cyan;
   }
@@ -126,6 +126,11 @@ nav {
   width: 56px;
   padding: 0;
   margin: 0;
+  overflow: hidden;
+  transition: all 0.25s ease;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 // INTRO CONTAINER --->
 
@@ -144,7 +149,7 @@ nav {
 }
 
 .progress-bar {
-  width: 85%;
+  width: 89.914%;
   height: rem(10px);
   background-color: rgb(243, 243, 243);
   margin: rem(10px) auto;
@@ -161,19 +166,22 @@ nav {
 //ABOUT-CONTAINER <---
 .about-container {
   padding: rem(30px) rem(30px);
+  h2 {
+    margin-bottom: rem(15px);
+  }
 }
 .about-p {
-  padding: rem(15px) 0;
+  padding: rem(10px) 0;
 }
 .products {
-  margin-top: rem(20px);
+  margin-top: rem(25px);
 }
 
 .product-container {
   border-radius: 10px;
   border: solid 1px rgb(210, 210, 210);
   margin: rem(20px) 0;
-  padding: rem(20px);
+  padding: rem(20px) rem(25px);
   h3 {
     font-size: rem(14px);
     font-weight: $fw-3;
@@ -212,21 +220,5 @@ nav {
 //ABOUT-CONTINER --->
 
 // MAIN END =====>
-
-.out-of-stock {
-  opacity: 0.5;
-  .product-button {
-    background-color: rgb(168, 167, 167);
-    cursor: none;
-  }
-}
-
-.attribution {
-  margin: rem(30px) auto;
-  font-size: rem(14px);
-  text-align: center;
-  font-weight: $fw-2;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
-}
+@import "activate";
+@import "desktop";

@@ -1,0 +1,27 @@
+@media only screen and (min-width: 600px) {
+  .bookmark-button {
+    all: unset;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+    padding-right: rem(30px);
+    border-radius: 30px;
+    font-size: rem(14px);
+    font-weight: $fw-3;
+    color: $n-dark-grey;
+    transition: all 0.25s ease;
+    svg {
+      margin-right: rem(20px);
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .product-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

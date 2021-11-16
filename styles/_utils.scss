@@ -17,3 +17,14 @@ $fs: rem(16px);
 $fw-1: 400;
 $fw-2: 500;
 $fw-3: 700;
+
+//Footer Styles
+.attribution {
+  margin: rem(30px) auto;
+  font-size: rem(14px);
+  text-align: center;
+  font-weight: $fw-2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
