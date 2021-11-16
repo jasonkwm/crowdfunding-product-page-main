@@ -1,0 +1,232 @@
+@import "reset";
+@import "utils";
+
+body {
+  font-family: $ff;
+  background-image: url(../images/image-hero-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: rgb(245, 245, 245);
+}
+p {
+  color: $n-dark-grey;
+  font-size: rem(14px);
+  font-weight: $fw-1;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $n-black;
+}
+
+span {
+  font-weight: $fw-1;
+}
+
+// NAV START <=====
+nav {
+  height: 25vh;
+}
+.nav-btn {
+  display: flex;
+  justify-content: space-between;
+  margin: rem(30px);
+}
+.nav-logo {
+  max-height: 100%;
+}
+
+#menu-btn {
+  background-image: url(../images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#menu-list {
+  display: none;
+  list-style-type: none;
+  width: 85%;
+  margin: auto;
+  padding: 0;
+  background-color: white;
+  border-radius: 10px;
+  li {
+    padding: rem(20px);
+    font-weight: $fw-2;
+    border-bottom: solid 1px rgb(212, 212, 212);
+  }
+  li:nth-child(3) {
+    border-bottom: none;
+  }
+}
+// NAV END =====>
+
+// MAIN START <=====
+.containers {
+  background-color: white;
+  width: 90%;
+  margin: rem(10px) auto;
+  max-width: rem(550px);
+  border-radius: 10px;
+}
+
+// INTRO CONTAINER <---
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 rem(20px) rem(30px) rem(20px);
+  h1 {
+    font-size: rem(22px);
+    line-height: 1.2;
+    padding-bottom: rem(20px);
+  }
+  p {
+    padding-bottom: rem(20px);
+  }
+}
+.intro-logo {
+  position: relative;
+  top: -25px;
+}
+.intro-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.back-button {
+  cursor: pointer;
+  background-color: $p-mod-cyan;
+  padding: 0 rem(50px);
+  border: none;
+  border-radius: 30px;
+  font-weight: $fw-3;
+  font-size: rem(14px);
+  color: white;
+  transition: all 0.3s ease !important;
+  &:hover {
+    background-color: $p-dark-cyan;
+  }
+}
+.bookmark-button {
+  margin-right: rem(20px);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  height: 56px;
+  width: 56px;
+  padding: 0;
+  margin: 0;
+}
+// INTRO CONTAINER --->
+
+// PROGRESS CONTAINER <---
+.progress-container {
+  text-align: center;
+  padding-bottom: rem(30px);
+}
+.progress-content {
+  padding: rem(20px) 0;
+}
+.divider {
+  margin: auto;
+  width: 80px;
+  border-bottom: solid 1px rgb(212, 209, 209);
+}
+
+.progress-bar {
+  width: 85%;
+  height: rem(10px);
+  background-color: rgb(243, 243, 243);
+  margin: rem(10px) auto;
+  border-radius: 30px;
+}
+.progress-meter {
+  background-color: $p-mod-cyan;
+  width: 80%;
+  height: 100%;
+  border-radius: 30px;
+}
+// PROGRESS CONTAINER --->
+
+//ABOUT-CONTAINER <---
+.about-container {
+  padding: rem(30px) rem(30px);
+}
+.about-p {
+  padding: rem(15px) 0;
+}
+.products {
+  margin-top: rem(20px);
+}
+
+.product-container {
+  border-radius: 10px;
+  border: solid 1px rgb(210, 210, 210);
+  margin: rem(20px) 0;
+  padding: rem(20px);
+  h3 {
+    font-size: rem(14px);
+    font-weight: $fw-3;
+  }
+}
+.pledge-p {
+  font-weight: $fw-2;
+  color: $p-mod-cyan;
+}
+.product-p {
+  margin: rem(25px) 0;
+}
+
+.product-quantity {
+  margin: rem(25px) 0;
+  font-size: rem(26px);
+  font-weight: $fw-3;
+  display: flex;
+  align-items: center;
+  span {
+    padding-left: rem(5px);
+    font-size: rem(14px);
+    color: $n-dark-grey;
+  }
+}
+.product-button {
+  background-color: $p-mod-cyan;
+  color: white;
+  font-weight: $fw-2;
+  font-size: rem(14px);
+  border: none;
+  border-radius: 30px;
+  padding: rem(12px) rem(30px);
+  cursor: pointer;
+}
+//ABOUT-CONTINER --->
+
+// MAIN END =====>
+
+.out-of-stock {
+  opacity: 0.5;
+  .product-button {
+    background-color: rgb(168, 167, 167);
+    cursor: none;
+  }
+}
+
+.attribution {
+  margin: rem(30px) auto;
+  font-size: rem(14px);
+  text-align: center;
+  font-weight: $fw-2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

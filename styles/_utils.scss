@@ -1,0 +1,19 @@
+// Rem function
+@function rem($size) {
+  @return ($size / 16px) * 1rem;
+}
+
+// Primary
+$p-mod-cyan: rgb(60, 180, 172);
+$p-dark-cyan: rgb(20, 123, 116);
+
+// Neutral
+$n-black: hsl(0, 0%, 0%);
+$n-dark-grey: hsl(0, 0%, 48%);
+
+// font family, size, weight
+$ff: "Commissioner", sans-serif;
+$fs: rem(16px);
+$fw-1: 400;
+$fw-2: 500;
+$fw-3: 700;
