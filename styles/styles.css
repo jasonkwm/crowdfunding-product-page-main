@@ -293,7 +293,7 @@ nav {
   padding: 1.25rem 1.5625rem;
 }
 
-.product-container h3 {
+.product-h {
   font-size: 0.875rem;
   font-weight: 700;
 }
@@ -356,6 +356,14 @@ nav {
 .out-of-stock .product-button {
   background-color: #a8a7a7;
   cursor: default;
+}
+
+.pledge-modal {
+  background-color: white;
+  width: 90%;
+  margin: 0.625rem auto;
+  max-width: 34.375rem;
+  border-radius: 10px;
 }
 
 @media only screen and (min-width: 600px) {

@@ -182,10 +182,10 @@ nav {
   border: solid 1px rgb(210, 210, 210);
   margin: rem(20px) 0;
   padding: rem(20px) rem(25px);
-  h3 {
-    font-size: rem(14px);
-    font-weight: $fw-3;
-  }
+}
+.product-h {
+  font-size: rem(14px);
+  font-weight: $fw-3;
 }
 .pledge-p {
   font-weight: $fw-2;
@@ -221,4 +221,5 @@ nav {
 
 // MAIN END =====>
 @import "activate";
+@import "modal";
 @import "desktop";
