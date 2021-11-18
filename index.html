@@ -136,70 +136,172 @@
         </div>
       </div>
     </main>
-    <div class="pledge-modal">
+    <div class="containers about-container pledge-modal">
+      <h2>Back this project</h2>
+      <p>
+        Want to support us in bringing Mastercraft Bamboo Monitor Riser out in
+        the world?
+      </p>
       <form action="">
         <div class="pledge-container">
-          <input type="radio" name="no-reward" id="no-reward" />
-          <label for="no-reward">Pledge with no reward</label>
-          <p>
-            Choose to support us without a reward if you simply believe in our
-            project. As a backer, you will be signed up to receive product
-            updates via email.
-          </p>
-          <button type="submit">Continue</button>
+          <div class="pledge-product">
+            <div class="pledge-radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="pledges"
+                id="no-pledge"
+              />
+              <span class="radio-button no-pledge"></span>
+              <div class="pledge-labels">
+                <label for="no-pledge" class="product-h radio-labels"
+                  >Pledge with no reward</label
+                >
+              </div>
+            </div>
+            <p class="product-p">
+              Choose to support us without a reward if you simply believe in our
+              project. As a backer, you will be signed up to receive product
+              updates via email.
+            </p>
+          </div>
+          <div class="pledge-price">
+            <p>Enter your pledge</p>
+            <label class="price-label">
+              <input
+              class="price-input"
+              type="number"
+              placeholder="0"
+              value="0"
+              min="0"
+            />
+            </label>
+            
+            <button type="submit" class="product-button">Continue</button>
+          </div>
         </div>
         <div class="pledge-container">
-          <div class="product-container">
-            <input type="radio" name="" id="" />
-            <label for="" class="product-h">Bamboo Stand</label>
-            <p class="pledge-p">Pledge $25 or more</p>
+          <div class="pledge-product">
+            <div class="pledge-radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="pledges"
+                id="bamboo"
+              />
+              <span class="radio-button"></span>
+              <div class="pledge-labels">
+                <label for="bamboo" class="product-h radio-labels"
+                  >Bamboo Stand</label
+                >
+                <label for="bamboo" class="pledge-p radio-labels"
+                  >Pledge $25 or more</label
+                >
+              </div>
+            </div>
             <p class="product-p">
               You get an ergonomic stand made of natural bamboo. You've helped
               us launch our promotional campaign, and you’ll be added to a
               special Backer member list.
             </p>
-            <h4>101<span>left</span></h4>
+            <h4 class="pledge-quantity">101<span>left</span></h4>
           </div>
-          <div>
+          <div class="pledge-price">
             <p>Enter your pledge</p>
-            <input type="number" placeholder="$25" />
-            <button type="submit">Continue</button>
+            <label class="price-label"
+              >
+            <input
+              class="price-input"
+              type="number"
+              placeholder="25"
+              value="25"
+              min="25"
+            />
+            <label/>
+            <button type="submit" class="product-button">Continue</button>
           </div>
         </div>
+
         <div class="pledge-container">
-          <div class="product-container">
-            <input type="radio" name="" id="" />
-            <label for="" class="product-h">Black Edition Stand</label>
-            <p class="pledge-p">Pledge $75 or more</p>
+          <div class="pledge-product">
+            <div class="pledge-radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="pledges"
+                id="black-edition"
+              />
+              <span class="radio-button"></span>
+              <div class="pledge-labels">
+                <label for="black-edition" class="product-h radio-labels"
+                  >Black Edition Stand</label
+                >
+                <label for="black-edition" class="pledge-p radio-labels"
+                  >Pledge $75 or more</label
+                >
+              </div>
+            </div>
+
             <p class="product-p">
               You get a Black Special Edition computer stand and a personal
               thank you. You’ll be added to our Backer member list. Shipping is
               included.
             </p>
-            <h4>64<span>left</span></h4>
+            <h4 class="pledge-quantity">64<span>left</span></h4>
           </div>
-          <div>
+          <div class="pledge-price">
             <p>Enter your pledge</p>
-            <input type="number" placeholder="$75" />
-            <button type="submit">Continue</button>
+            <label class="price-label"
+              >$
+              <input
+                class="price-input"
+                type="number"
+                placeholder="75"
+                value="75"
+                min="75"
+              />
+            </label>
+            <button class="product-button" type="submit">Continue</button>
           </div>
         </div>
         <div class="pledge-container out-of-stock">
-          <div class="product-container">
-            <input type="radio" name="" id="" />
-            <label for="" class="product-h">Mahogany Special Edition</label>
-            <p class="pledge-p">Pledge $200 or more</p>
+          <div class="pledge-product">
+            <div class="pledge-radio">
+              <input
+                class="radio-input"
+                type="radio"
+                name="pledges"
+                id="mahogany"
+              />
+              <span class="radio-button"></span>
+              <div class="pledge-labels">
+                <label for="mahogany" class="product-h radio-labels"
+                  >Mahogany Special Edition</label
+                >
+                <label for="mahogany" class="pledge-p radio-labels"
+                  >Pledge $200 or more</label
+                >
+              </div>
+            </div>
             <p class="product-p">
               You get two Special Edition Mahogany stands, a Backer T-Shirt, and
               a personal thank you. You’ll be added to our Backer member list.
               Shipping is included.
             </p>
-            <h4>0<span>left</span></h4>
+            <h4 class="pledge-quantity">0<span>left</span></h4>
           </div>
-          <div>
+          <div class="pledge-price">
             <p>Enter your pledge</p>
-            <input type="number" placeholder="$25" />
-            <button type="submit">Continue</button>
+            <label class="price-label">
+              <input
+              class="price-input"
+              type="number"
+              placeholder="200"
+              value="200"
+              min="200"
+            />
+            </label>
+            <button class="product-button" type="submit">Continue</button>
           </div>
         </div>
       </form>

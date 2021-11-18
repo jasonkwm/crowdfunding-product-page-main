@@ -26,7 +26,7 @@ span {
   font-weight: $fw-1;
 }
 
-// NAV START <=====
+// NAV START =====>
 nav {
   height: 25vh;
 }
@@ -66,9 +66,9 @@ nav {
     border-bottom: none;
   }
 }
-// NAV END =====>
+// NAV END <=====
 
-// MAIN START <=====
+// MAIN START =====>
 .containers {
   background-color: white;
   width: 90%;
@@ -77,7 +77,7 @@ nav {
   border-radius: 10px;
 }
 
-// INTRO CONTAINER <---
+// INTRO CONTAINER --->
 .intro-container {
   display: flex;
   flex-direction: column;
@@ -132,9 +132,9 @@ nav {
     opacity: 0.5;
   }
 }
-// INTRO CONTAINER --->
+// INTRO CONTAINER <---
 
-// PROGRESS CONTAINER <---
+// PROGRESS CONTAINER --->
 .progress-container {
   text-align: center;
   padding-bottom: rem(30px);
@@ -161,9 +161,9 @@ nav {
   height: 100%;
   border-radius: 30px;
 }
-// PROGRESS CONTAINER --->
+// PROGRESS CONTAINER <---
 
-//ABOUT-CONTAINER <---
+//ABOUT-CONTAINER --->
 .about-container {
   padding: rem(30px) rem(30px);
   h2 {
@@ -217,9 +217,9 @@ nav {
   padding: rem(12px) rem(30px);
   cursor: pointer;
 }
-//ABOUT-CONTINER --->
+//ABOUT-CONTINER <---
 
-// MAIN END =====>
+// MAIN END <=====
 @import "activate";
 @import "modal";
 @import "desktop";

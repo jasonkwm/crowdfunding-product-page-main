@@ -1,7 +1,106 @@
-.pledge-modal {
-  background-color: white;
-  width: 90%;
-  margin: rem(10px) auto;
-  max-width: rem(550px);
+.pledge-container {
+  margin: rem(20px) 0;
   border-radius: 10px;
+  border: solid 2px rgb(210, 210, 210);
+}
+.pledge-product {
+  padding: rem(20px) rem(25px);
+}
+
+.pledge-radio {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.radio-labels {
+  margin-left: rem(12px);
+  display: block;
+  font-size: rem(14px);
+}
+
+.radio-input {
+  position: relative;
+  visibility: hidden;
+  left: rem(0px);
+  top: rem(8px);
+  width: rem(24px);
+  height: rem(24px);
+}
+.no-pledge {
+  top: rem(2px) !important;
+}
+
+.radio-button {
+  position: absolute;
+  left: rem(0px);
+  top: rem(8px);
+  width: rem(24px);
+  height: rem(24px);
+  border-radius: 50%;
+  border: solid 1px rgb(210, 210, 210);
+}
+
+.radio-button::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radio-input:checked ~ .radio-button:after {
+  display: block;
+}
+
+.radio-button:after {
+  top: rem(5px);
+  left: rem(5px);
+  width: rem(12px);
+  height: rem(12px);
+  border-radius: 50%;
+  background-color: $p-mod-cyan;
+}
+
+.pledge-quantity {
+  font-size: rem(20px);
+  font-weight: $fw-3;
+  display: flex;
+  align-items: center;
+  span {
+    padding-left: rem(8px);
+    font-size: rem(14px);
+    color: $n-dark-grey;
+  }
+}
+
+.pledge-price {
+  border-top: solid 1px rgb(210, 210, 210);
+  padding: rem(20px) rem(10px);
+  text-align: center;
+  display: none;
+  p {
+    padding-bottom: rem(14px);
+  }
+}
+.price-label {
+  font-weight: $fw-3;
+  font-size: rem(14px);
+  border: solid 2px rgb(210, 210, 210);
+  border-radius: 30px;
+  color: rgb(210, 210, 210);
+  padding: rem(12px) rem(20px);
+  margin-right: rem(10px);
+  display: inline-block;
+}
+.price-input {
+  outline: none;
+  border: none;
+  width: 4ch;
+  appearance: textfield;
+}
+
+.pledge-container-active {
+  border: solid 2px $p-mod-cyan;
+}
+
+.pledge-enter-active {
+  display: block;
 }

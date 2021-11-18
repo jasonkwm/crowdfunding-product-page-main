@@ -358,12 +358,128 @@ nav {
   cursor: default;
 }
 
-.pledge-modal {
-  background-color: white;
-  width: 90%;
-  margin: 0.625rem auto;
-  max-width: 34.375rem;
+.pledge-container {
+  margin: 1.25rem 0;
   border-radius: 10px;
+  border: solid 2px #d2d2d2;
+}
+
+.pledge-product {
+  padding: 1.25rem 1.5625rem;
+}
+
+.pledge-radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.radio-labels {
+  margin-left: 0.75rem;
+  display: block;
+  font-size: 0.875rem;
+}
+
+.radio-input {
+  position: relative;
+  visibility: hidden;
+  left: 0rem;
+  top: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.no-pledge {
+  top: 0.125rem !important;
+}
+
+.radio-button {
+  position: absolute;
+  left: 0rem;
+  top: 0.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  border: solid 1px #d2d2d2;
+}
+
+.radio-button::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-input:checked ~ .radio-button:after {
+  display: block;
+}
+
+.radio-button:after {
+  top: 0.3125rem;
+  left: 0.3125rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #3cb4ac;
+}
+
+.pledge-quantity {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pledge-quantity span {
+  padding-left: 0.5rem;
+  font-size: 0.875rem;
+  color: #7a7a7a;
+}
+
+.pledge-price {
+  border-top: solid 1px #d2d2d2;
+  padding: 1.25rem 0.625rem;
+  text-align: center;
+  display: none;
+}
+
+.pledge-price p {
+  padding-bottom: 0.875rem;
+}
+
+.price-label {
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: solid 2px #d2d2d2;
+  border-radius: 30px;
+  color: #d2d2d2;
+  padding: 0.75rem 1.25rem;
+  margin-right: 0.625rem;
+  display: inline-block;
+}
+
+.price-input {
+  outline: none;
+  border: none;
+  width: 4ch;
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+.pledge-container-active {
+  border: solid 2px #3cb4ac;
+}
+
+.pledge-enter-active {
+  display: block;
 }
 
 @media only screen and (min-width: 600px) {
