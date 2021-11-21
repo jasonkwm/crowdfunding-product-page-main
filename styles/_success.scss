@@ -1,0 +1,30 @@
+.success-modal {
+  margin: auto;
+  background-color: white;
+  padding: rem(30px);
+  width: 90%;
+  max-width: rem(400px);
+  text-align: center;
+  border-radius: 10px;
+  img {
+    margin: auto;
+  }
+  h2 {
+    margin-top: rem(25px);
+    font-size: rem(20px);
+  }
+  p {
+    margin-top: rem(12px);
+    font-size: rem(14px);
+    line-height: 1.7;
+  }
+  button {
+    border: none;
+    border-radius: 30px;
+    background-color: $p-mod-cyan;
+    color: white;
+    font-size: rem(14px);
+    padding: rem(10px) rem(30px);
+    margin-top: rem(25px);
+  }
+}

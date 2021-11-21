@@ -87,6 +87,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: whitesmoke;
+  position: relative;
 }
 
 p {
@@ -334,6 +335,96 @@ nav {
   border-radius: 30px;
   padding: 0.75rem 1.875rem;
   cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.product-button:hover {
+  background-color: #147b74;
+}
+
+@media only screen and (min-width: 610px) {
+  body {
+    background-image: url(../images/image-hero-desktop.jpg);
+  }
+  nav {
+    height: 14vh;
+  }
+  .bookmark-button {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    padding-right: 1.875rem;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #7a7a7a;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+  .bookmark-button svg {
+    margin-right: 1.25rem;
+  }
+  .bookmark-button:hover {
+    opacity: 0.8;
+  }
+  .product-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  nav {
+    height: 18vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+    margin: 0.625rem auto;
+  }
+  .nav-btn {
+    display: block;
+  }
+  #menu-btn {
+    display: none;
+  }
+  #menu-list {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: white;
+    list-style: none;
+  }
+  #menu-list li {
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  nav {
+    height: 25vh;
+  }
 }
 
 .bookmark-activate {
@@ -356,6 +447,15 @@ nav {
 .out-of-stock .product-button {
   background-color: #a8a7a7;
   cursor: default;
+}
+
+.pledge-modal {
+  background-color: white;
+  width: 90%;
+  margin: 0.625rem auto;
+  max-width: 34.375rem;
+  border-radius: 10px;
+  padding: 1.875rem 1.875rem;
 }
 
 .pledge-container {
@@ -482,41 +582,78 @@ nav {
   display: block;
 }
 
-@media only screen and (min-width: 600px) {
-  .bookmark-button {
-    all: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    cursor: pointer;
-    background-color: #f0f0f0;
-    padding-right: 1.875rem;
-    border-radius: 30px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    color: #7a7a7a;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-  }
-  .bookmark-button svg {
-    margin-right: 1.25rem;
-  }
-  .bookmark-button:hover {
-    opacity: 0.8;
-  }
-  .product-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+.success-modal {
+  margin: auto;
+  background-color: white;
+  padding: 1.875rem;
+  width: 90%;
+  max-width: 25rem;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.success-modal img {
+  margin: auto;
+}
+
+.success-modal h2 {
+  margin-top: 1.5625rem;
+  font-size: 1.25rem;
+}
+
+.success-modal p {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.7;
+}
+
+.success-modal button {
+  border: none;
+  border-radius: 30px;
+  background-color: #3cb4ac;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.625rem 1.875rem;
+  margin-top: 1.5625rem;
+}
+
+.success-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.body-modal {
+  overflow-y: hidden;
+}
+
+.pledge-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(200, 200, 200, 0.5);
+  overflow-y: scroll;
+  display: none;
 }
 /*# sourceMappingURL=styles.css.map */

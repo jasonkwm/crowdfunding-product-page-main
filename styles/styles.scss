@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   background-color: rgb(245, 245, 245);
+  position: relative;
 }
 p {
   color: $n-dark-grey;
@@ -26,47 +27,7 @@ span {
   font-weight: $fw-1;
 }
 
-// NAV START =====>
-nav {
-  height: 25vh;
-}
-.nav-btn {
-  display: flex;
-  justify-content: space-between;
-  margin: rem(30px);
-}
-.nav-logo {
-  max-height: 100%;
-}
-
-#menu-btn {
-  background-image: url(../images/icon-hamburger.svg);
-  background-repeat: no-repeat;
-  width: 15px;
-  height: 16px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-#menu-list {
-  display: none;
-  list-style-type: none;
-  width: 85%;
-  margin: auto;
-  padding: 0;
-  background-color: white;
-  border-radius: 10px;
-  li {
-    padding: rem(20px);
-    font-weight: $fw-2;
-    border-bottom: solid 1px rgb(212, 212, 212);
-  }
-  li:nth-child(3) {
-    border-bottom: none;
-  }
-}
-// NAV END <=====
+@import "nav";
 
 // MAIN START =====>
 .containers {
@@ -216,10 +177,16 @@ nav {
   border-radius: 30px;
   padding: rem(12px) rem(30px);
   cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    background-color: $p-dark-cyan;
+  }
 }
 //ABOUT-CONTINER <---
 
 // MAIN END <=====
+@import "desktop";
 @import "activate";
 @import "modal";
-@import "desktop";
+@import "success";
+@import "modal-function";

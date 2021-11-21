@@ -1,4 +1,11 @@
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 610px) {
+  body {
+    background-image: url(../images/image-hero-desktop.jpg);
+  }
+  nav {
+    height: 14vh;
+  }
+
   .bookmark-button {
     all: unset;
     display: flex;
@@ -23,5 +30,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  nav {
+    height: 18vh;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: rem(10px) auto;
+  }
+  .nav-btn {
+    display: block;
+  }
+  #menu-btn {
+    display: none;
+  }
+  #menu-list {
+    all: unset;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+    li {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+@media only screen and (min-width: 1080px) {
+  nav {
+    height: 25vh;
   }
 }
