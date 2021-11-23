@@ -53,9 +53,11 @@
     justify-content: space-around;
     color: white;
     list-style: none;
+    margin-bottom: auto;
     li {
       border: none;
       cursor: pointer;
+      padding: 1rem;
     }
   }
 }

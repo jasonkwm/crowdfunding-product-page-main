@@ -1,6 +1,8 @@
 @import "reset";
 @import "utils";
-
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   font-family: $ff;
   background-image: url(../images/image-hero-mobile.jpg);

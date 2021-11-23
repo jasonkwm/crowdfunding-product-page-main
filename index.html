@@ -29,9 +29,9 @@
         <button id="menu-btn"></button>
       </div>
       <ul id="menu-list">
-        <li>About</li>
-        <li>Discover</li>
-        <li>Get Started</li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#discover">Discover</a></li>
+        <li><a class="anchor" id="start" href="#">Get Started</a></li>
       </ul>
     </nav>
     <main>
@@ -41,9 +41,9 @@
         <p>
           A beautiful & handcrafted monitor stand to reduce neck and eye strain.
         </p>
-        <div class="intro-buttons">
-          <button class="back-button">Back this project</button>
-          <button class="bookmark-button">
+      <div class="intro-buttons">
+          <button class="back-button" value="no-pledge">Back this project</button>
+          <button class="bookmark-button" value="bookmark">
             <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg">
               <g fill="none" fill-rule="evenodd">
                 <circle fill="#2F2F2F" cx="28" cy="28" r="28" />
@@ -73,7 +73,7 @@
           <div class="progress-meter"></div>
         </div>
       </div>
-      <div class="containers about-container">
+      <div id="about" class="containers about-container">
         <h2>About this project</h2>
         <p class="about-p">
           The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform
@@ -87,7 +87,7 @@
           extra desk space below your computer to allow notepads, pens, and USB
           sticks to be stored under the stand.
         </p>
-        <div class="products">
+        <div id="discover" class="products">
           <div class="product-container">
             <div class="product-flex">
               <h3 class="product-h">Bamboo Stand</h3>
@@ -100,7 +100,7 @@
             </p>
             <div class="product-flex">
               <h4 class="product-quantity">101<span>left</span></h4>
-              <button class="product-button">Select Reward</button>
+              <button class="product-button" value="bamboo">Select Reward</button>
             </div>
           </div>
           <div class="product-container">
@@ -115,7 +115,7 @@
             </p>
             <div class="product-flex">
               <h4 class="product-quantity">64<span>left</span></h4>
-              <button class="product-button">Select Reward</button>
+              <button class="product-button" value="black-edition">Select Reward</button>
             </div>
           </div>
           <div class="product-container out-of-stock">
@@ -130,7 +130,7 @@
             </p>
             <div class="product-flex">
               <h4 class="product-quantity">0<span>left</span></h4>
-              <button class="product-button">Out of Stock</button>
+              <button class="product-button" value="mahogany">Out of Stock</button>
             </div>
           </div>
         </div>
@@ -264,7 +264,7 @@
               <button class="product-button" type="submit">Continue</button>
             </div>
           </div>
-          <div class="pledge-container out-of-stock">
+          <div class="pledge-container ">
             <div class="pledge-product">
               <div class="pledge-radio">
                 <input

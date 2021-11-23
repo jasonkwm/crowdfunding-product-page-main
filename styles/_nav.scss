@@ -6,9 +6,6 @@ nav {
   justify-content: space-between;
   margin: rem(30px);
 }
-.nav-logo {
-  max-height: 100%;
-}
 
 #menu-btn {
   background-image: url(../images/icon-hamburger.svg);
@@ -29,11 +26,23 @@ nav {
   background-color: white;
   border-radius: 10px;
   li {
-    padding: rem(20px);
+    padding: rem(10px);
+    margin: rem(10px);
     font-weight: $fw-2;
     border-bottom: solid 1px rgb(212, 212, 212);
   }
   li:nth-child(3) {
     border-bottom: none;
   }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
 }

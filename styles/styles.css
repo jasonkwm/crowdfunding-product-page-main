@@ -81,6 +81,10 @@ select {
   color: #3e52a3;
 }
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   font-family: "Commissioner", sans-serif;
   background-image: url(../images/image-hero-mobile.jpg);
@@ -122,10 +126,6 @@ nav {
   margin: 1.875rem;
 }
 
-.nav-logo {
-  max-height: 100%;
-}
-
 #menu-btn {
   background-image: url(../images/icon-hamburger.svg);
   background-repeat: no-repeat;
@@ -147,13 +147,26 @@ nav {
 }
 
 #menu-list li {
-  padding: 1.25rem;
+  padding: 0.625rem;
+  margin: 0.625rem;
   font-weight: 500;
   border-bottom: solid 1px #d4d4d4;
 }
 
 #menu-list li:nth-child(3) {
   border-bottom: none;
+}
+
+#menu-list a {
+  text-decoration: none;
+  color: white;
+}
+
+:target:before {
+  content: "";
+  display: block;
+  height: 100px;
+  margin: -100px 0 0;
 }
 
 .containers {
@@ -414,10 +427,12 @@ nav {
         justify-content: space-around;
     color: white;
     list-style: none;
+    margin-bottom: auto;
   }
   #menu-list li {
     border: none;
     cursor: pointer;
+    padding: 1rem;
   }
 }
 
@@ -637,10 +652,14 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .body-modal {
+  padding-right: 0.9375rem;
   overflow-y: hidden;
 }
 
@@ -654,6 +673,9 @@ nav {
   height: 100%;
   background-color: rgba(200, 200, 200, 0.5);
   overflow-y: scroll;
-  display: none;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
+  visibility: hidden;
+  opacity: 0;
 }
 /*# sourceMappingURL=styles.css.map */
