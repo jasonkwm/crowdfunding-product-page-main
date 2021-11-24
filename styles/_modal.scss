@@ -82,9 +82,12 @@
 
 .pledge-price {
   border-top: solid 1px rgb(210, 210, 210);
-  padding: rem(20px) rem(10px);
   text-align: center;
-  display: none;
+  visibility: hidden;
+  height: 0;
+  .product-button {
+    transition: none;
+  }
   p {
     padding-bottom: rem(14px);
   }
@@ -106,10 +109,12 @@
   appearance: textfield;
 }
 
-.pledge-container-active {
+.pledge-active {
   border: solid 2px $p-mod-cyan;
 }
 
-.pledge-enter-active {
-  display: block;
+.price-active {
+  padding: rem(20px) rem(10px);
+  visibility: visible;
+  height: auto;
 }

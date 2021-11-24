@@ -560,9 +560,14 @@ nav {
 
 .pledge-price {
   border-top: solid 1px #d2d2d2;
-  padding: 1.25rem 0.625rem;
   text-align: center;
-  display: none;
+  visibility: hidden;
+  height: 0;
+}
+
+.pledge-price .product-button {
+  -webkit-transition: none;
+  transition: none;
 }
 
 .pledge-price p {
@@ -589,12 +594,14 @@ nav {
           appearance: textfield;
 }
 
-.pledge-container-active {
+.pledge-active {
   border: solid 2px #3cb4ac;
 }
 
-.pledge-enter-active {
-  display: block;
+.price-active {
+  padding: 1.25rem 0.625rem;
+  visibility: visible;
+  height: auto;
 }
 
 .success-modal {
@@ -632,6 +639,10 @@ nav {
   margin-top: 1.5625rem;
 }
 
+#got-it {
+  cursor: pointer;
+}
+
 .success-background {
   position: fixed;
   top: 0;
@@ -652,8 +663,8 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: all 0.33s ease;
+  transition: all 0.33s ease;
   visibility: hidden;
   opacity: 0;
 }

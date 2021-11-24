@@ -5,12 +5,12 @@ const prodContainer = document.querySelectorAll(".product-container");
 const pledgeContainer = document.querySelectorAll(".pledge-container");
 const pledgeBackground = document.querySelector(".pledge-background");
 const successBackground = document.querySelector(".success-background");
-const inputId = document.querySelectorAll(".radio-input");
 const prodQty = document.querySelectorAll(".product-quantity");
 const pledgeQty = document.querySelectorAll(".pledge-quantity");
 
 const visible = `visibility: visible; opacity: 1;`;
-
+const pledges = document.querySelectorAll("input[type=radio][name='pledges']");
+const submitButton = document.querySelectorAll(".submit-button");
 //Nav 'Get Started' to open modal and focus on #no-pledge
 getStarted.addEventListener("click", (e) => {
   document.querySelector("#no-pledge").checked = true;
@@ -19,22 +19,38 @@ getStarted.addEventListener("click", (e) => {
   pledgeBackground.scrollTop = 0;
 });
 
-//disable if out of stock for main
-prodContainer.forEach((e) => {
-  if (e.classList.contains("out-of-stock")) {
-    e.querySelector("button").disabled = true;
-  }
-});
+//Bookmark
+const bookmark = document.querySelector("#bookmark");
+bookmark.setAttribute("title", document.title);
+bookmark.setAttribute("rel", "sidebar");
+bookmark.setAttribute("href", window.location.href);
+
+//       alert(
+//         "You can add this page to your bookmarks by pressing " +
+//           (navigator.userAgent.toLowerCase().indexOf("mac") != -1
+//             ? "Command/Cmd"
+//             : "CTRL") +
+//           " + D on your keyboard."
+//       );
+//     }
 
 //Click on product to open modal
 prodButton.forEach((elem) => {
+  //Remove active status
   elem.addEventListener("click", (c) => {
-    //Get id of radio input for product and checked it
+    pledgeContainer.forEach((container) => {
+      container.classList.remove("pledge-active");
+      container.querySelector(".pledge-price").classList.remove("price-active");
+    });
+    // gp = GrandParent, id= input type radio
     let id = document.querySelector(`#${c.target.value}`);
+    let gp = id.closest(".pledge-container");
+    let pledgePrice = gp.querySelector(".pledge-price");
     id.checked = true;
     pledgeBackground.style.cssText = visible;
     body.classList.add("body-modal");
-
+    gp.classList.add("pledge-active");
+    pledgePrice.classList.add("price-active");
     //Scroll Focus
     let cur = id;
     let distance = 0;
@@ -84,9 +100,31 @@ pledgeQty.forEach((elem) => {
 // **This function must come after determining if product is 'out-of-stock'**
 pledgeContainer.forEach((elem) => {
   //only add click event if in stock
+  let price = elem.querySelector(".pledge-price");
   if (!elem.classList.contains("out-of-stock")) {
     elem.addEventListener("click", (event) => {
+      pledgeContainer.forEach((con) => {
+        let p = con.querySelector(".pledge-price");
+        con.classList.remove("pledge-active");
+        p.classList.remove("price-active");
+      });
       elem.querySelector("input").checked = true;
+      elem.classList.add("pledge-active");
+      price.classList.add("price-active");
     });
   }
+});
+
+submitButton.forEach((button) => {
+  button.addEventListener("click", () => {
+    pledgeBackground.style.cssText = "visibility:hidden; opacity:0; ";
+    successBackground.style.cssText = visible;
+  });
+});
+
+const gotIt = document.querySelector("#got-it");
+
+gotIt.addEventListener("click", () => {
+  successBackground.style.cssText = "visibility:hidden; opacity:0; ";
+  body.classList.remove("body-modal");
 });
