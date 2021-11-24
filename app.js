@@ -7,7 +7,8 @@ const pledgeBackground = document.querySelector(".pledge-background");
 const successBackground = document.querySelector(".success-background");
 const prodQty = document.querySelectorAll(".product-quantity");
 const pledgeQty = document.querySelectorAll(".pledge-quantity");
-
+const menuBtn = document.querySelector("#menu-btn");
+const menuList = document.querySelector(".menu-lists");
 const visible = `visibility: visible; opacity: 1;`;
 const pledges = document.querySelectorAll("input[type=radio][name='pledges']");
 const submitButton = document.querySelectorAll(".submit-button");
@@ -17,6 +18,15 @@ getStarted.addEventListener("click", (e) => {
   pledgeBackground.style.cssText = visible;
   body.classList.add("body-modal");
   pledgeBackground.scrollTop = 0;
+});
+
+//Menu Button
+menuBtn.addEventListener("click", (menu) => {
+  if (menuList.classList.contains("menu-active")) {
+    menuList.classList.remove("menu-active");
+  } else {
+    menuList.classList.add("menu-active");
+  }
 });
 
 //Bookmark

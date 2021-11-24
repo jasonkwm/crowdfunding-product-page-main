@@ -4,6 +4,33 @@
   }
   nav {
     height: 14vh;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: rem(10px) auto;
+  }
+  .nav-btn {
+    display: block;
+  }
+  #menu-btn {
+    display: none;
+  }
+  .menu-lists {
+    all: unset;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    list-style: none;
+    margin-bottom: auto;
+    li {
+      border: none;
+      cursor: pointer;
+      padding: 1rem;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
   }
 
   .bookmark-button {
@@ -33,34 +60,6 @@
   }
 }
 
-@media only screen and (min-width: 800px) {
-  nav {
-    height: 18vh;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    margin: rem(10px) auto;
-  }
-  .nav-btn {
-    display: block;
-  }
-  #menu-btn {
-    display: none;
-  }
-  #menu-list {
-    all: unset;
-    display: flex;
-    justify-content: space-around;
-    color: white;
-    list-style: none;
-    margin-bottom: auto;
-    li {
-      border: none;
-      cursor: pointer;
-      padding: 1rem;
-    }
-  }
-}
 @media only screen and (min-width: 1080px) {
   nav {
     height: 25vh;

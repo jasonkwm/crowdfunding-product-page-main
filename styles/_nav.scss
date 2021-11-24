@@ -17,8 +17,9 @@ nav {
   cursor: pointer;
 }
 
-#menu-list {
-  display: none;
+.menu-lists {
+  visibility: hidden;
+  height: 0;
   list-style-type: none;
   width: 85%;
   margin: auto;
@@ -36,7 +37,7 @@ nav {
   }
   a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
   }
 }
 
@@ -45,4 +46,14 @@ nav {
   display: block;
   height: 100px;
   margin: -100px 0 0;
+}
+
+.menu-active {
+  visibility: visible;
+  height: auto;
+  z-index: 3;
+  a {
+    display: inline-block;
+    width: 100%;
+  }
 }

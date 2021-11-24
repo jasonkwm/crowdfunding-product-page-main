@@ -136,8 +136,9 @@ nav {
   cursor: pointer;
 }
 
-#menu-list {
-  display: none;
+.menu-lists {
+  visibility: hidden;
+  height: 0;
   list-style-type: none;
   width: 85%;
   margin: auto;
@@ -146,20 +147,20 @@ nav {
   border-radius: 10px;
 }
 
-#menu-list li {
+.menu-lists li {
   padding: 0.625rem;
   margin: 0.625rem;
   font-weight: 500;
   border-bottom: solid 1px #d4d4d4;
 }
 
-#menu-list li:nth-child(3) {
+.menu-lists li:nth-child(3) {
   border-bottom: none;
 }
 
-#menu-list a {
+.menu-lists a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 :target:before {
@@ -167,6 +168,17 @@ nav {
   display: block;
   height: 100px;
   margin: -100px 0 0;
+}
+
+.menu-active {
+  visibility: visible;
+  height: auto;
+  z-index: 3;
+}
+
+.menu-active a {
+  display: inline-block;
+  width: 100%;
 }
 
 .containers {
@@ -362,6 +374,40 @@ nav {
   }
   nav {
     height: 14vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 90%;
+    margin: 0.625rem auto;
+  }
+  .nav-btn {
+    display: block;
+  }
+  #menu-btn {
+    display: none;
+  }
+  .menu-lists {
+    all: unset;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: white;
+    list-style: none;
+    margin-bottom: auto;
+  }
+  .menu-lists li {
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+  }
+  .menu-lists a {
+    text-decoration: none;
+    color: white;
   }
   .bookmark-button {
     all: unset;
@@ -397,42 +443,6 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  nav {
-    height: 18vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    width: 90%;
-    margin: 0.625rem auto;
-  }
-  .nav-btn {
-    display: block;
-  }
-  #menu-btn {
-    display: none;
-  }
-  #menu-list {
-    all: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    color: white;
-    list-style: none;
-    margin-bottom: auto;
-  }
-  #menu-list li {
-    border: none;
-    cursor: pointer;
-    padding: 1rem;
   }
 }
 
