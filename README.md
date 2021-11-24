@@ -9,7 +9,7 @@ The challenge is to build out this order summary card component and get it looki
 
 This is my solution to the [Order summary card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-I've decided to complete this mini-project using HTML & SCSS.
+I've decided to complete this mini-project using HTML, SCSS, & JS.
 
 
 ### Below is a link to my solution
