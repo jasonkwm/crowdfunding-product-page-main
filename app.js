@@ -12,12 +12,23 @@ const menuList = document.querySelector(".menu-lists");
 const visible = `visibility: visible; opacity: 1;`;
 const pledges = document.querySelectorAll("input[type=radio][name='pledges']");
 const submitButton = document.querySelectorAll(".submit-button");
+
 //Nav 'Get Started' to open modal and focus on #no-pledge
 getStarted.addEventListener("click", (e) => {
   document.querySelector("#no-pledge").checked = true;
   pledgeBackground.style.cssText = visible;
   body.classList.add("body-modal");
   pledgeBackground.scrollTop = 0;
+  // Remove activated styles
+  pledgeContainer.forEach((container) => {
+    container.classList.remove("pledge-active");
+    container.querySelector(".pledge-price").classList.remove("price-active");
+  });
+  // Activate Pricing Input
+  let gp = document.querySelector("#no-pledge").closest(".pledge-container");
+  let pledgePrice = gp.querySelector(".pledge-price");
+  gp.classList.add("pledge-active");
+  pledgePrice.classList.add("price-active");
 });
 
 //Menu Button
