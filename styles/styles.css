@@ -114,6 +114,8 @@ span {
 
 nav {
   height: 25vh;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-btn {
@@ -173,7 +175,6 @@ nav {
 .menu-active {
   visibility: visible;
   height: auto;
-  z-index: 3;
 }
 
 .menu-active a {
@@ -220,6 +221,7 @@ nav {
 .intro-logo {
   position: relative;
   top: -25px;
+  z-index: 1;
 }
 
 .intro-buttons {

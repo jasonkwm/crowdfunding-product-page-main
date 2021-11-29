@@ -1,5 +1,7 @@
 nav {
   height: 25vh;
+  position: relative;
+  z-index: 2;
 }
 .nav-btn {
   display: flex;
@@ -51,7 +53,7 @@ nav {
 .menu-active {
   visibility: visible;
   height: auto;
-  z-index: 3;
+
   a {
     display: inline-block;
     width: 100%;
