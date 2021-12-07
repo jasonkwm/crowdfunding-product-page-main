@@ -42,18 +42,15 @@ menuBtn.addEventListener("click", (menu) => {
 
 //Bookmark
 const bookmark = document.querySelector("#bookmark");
-bookmark.setAttribute("title", document.title);
-bookmark.setAttribute("rel", "sidebar");
-bookmark.setAttribute("href", window.location.href);
-
-//       alert(
-//         "You can add this page to your bookmarks by pressing " +
-//           (navigator.userAgent.toLowerCase().indexOf("mac") != -1
-//             ? "Command/Cmd"
-//             : "CTRL") +
-//           " + D on your keyboard."
-//       );
-//     }
+bookmark.addEventListener("click", () => {
+  alert(
+    "You can add this page to your bookmarks by pressing " +
+      (navigator.userAgent.toLowerCase().indexOf("mac") != -1
+        ? "Command/Cmd"
+        : "CTRL") +
+      " + D on your keyboard."
+  );
+});
 
 //Click on product to open modal
 prodButton.forEach((elem) => {
