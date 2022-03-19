@@ -1,4 +1,4 @@
-# Frontend Mentor - Order summary card solution
+# Frontend Mentor - Crowdfunding Product Page
 
 ![My solution for this challenge](./design/desktop-preview.jpg)
 
